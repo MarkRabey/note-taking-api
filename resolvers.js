@@ -14,10 +14,10 @@ export const resolvers = {
       return await Note.create(input);
     },
     async updateNote(root, {_id, input}){
-      return await Note.findOneAndUpdate({_id},input,{new: true})
+      return await Note.findByIdAndUpdate(_id, input)
     },
     async deleteNote(root, {_id}){
-      return await Note.findOneAndRemove({_id});
+      return await Note.findByIdAndRemove(_id);
     }
   }
 };
