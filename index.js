@@ -7,7 +7,7 @@ import cors from 'cors';
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/notetaking_db', {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
 });
 
 const app = express();
